@@ -20,14 +20,7 @@ export const Story = ({ storyID }) => {
                 <a href={story.url}>{story.title}</a>
             </StoryTitle>
             <StoryMeta>
-                <span data-testid="story-by">
-                    <StoryMetaElement color="#000">By:</StoryMetaElement>{' '}
-                    {story.by}
-                </span>
-                <span data-testid="story-time">
-                    <StoryMetaElement color="#000">Posted:</StoryMetaElement>{' '}
-                    {`${mapTime(story.time)} ago`}
-                </span>
+                by {story.by} {`${mapTime(story.time)} ago`}
             </StoryMeta>
         </StoryWrapper>
     ) : null;
